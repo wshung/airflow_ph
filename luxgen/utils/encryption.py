@@ -4,7 +4,7 @@ import configparser
 try:
     from Crypto.Cipher import AES
 except:
-    !pip install pycryptodome
+    pip install pycryptodome
     from Crypto.Cipher import AES
 
 # 定義密碼加密解密所需的 key
