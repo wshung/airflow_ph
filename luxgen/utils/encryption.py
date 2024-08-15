@@ -1,11 +1,7 @@
 ﻿import hashlib
 import base64
 import configparser
-try:
-    from Crypto.Cipher import AES
-except:
-    pip3 install pycryptodome
-    from Crypto.Cipher import AES
+from Crypto.Cipher import AES
 
 # 定義密碼加密解密所需的 key
 key = b'YulonGroupTacKey'  #key: MySuperSecretKey
