@@ -25,7 +25,7 @@ def bash_dag():
     
     task_1=BashOperator(
         task_id='lxg_flow_04', 
-        bash_command='python3.10 /opt/airflow/dags/test/airflow_ph/luxgen/flow_04.py',
+        bash_command='python3 /opt/airflow/dags/test/airflow_ph/luxgen/flow_04.py',
          )
     
     task_1
