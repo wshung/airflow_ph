@@ -4,7 +4,6 @@ from airflow.decorators import dag
 from airflow.operators.python import PythonOperator
 from airflow.operators.bash import BashOperato
 from airflow.providers.postgres.operators.postgres import PostgresOperator
-import test.airflow_ph.luxgen.flow_04 as flow_04
 from airflow.models import Variable, XCom
 
 default_args = {
