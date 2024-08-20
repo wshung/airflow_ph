@@ -12,7 +12,7 @@ default_args = {
     'max_active_runs': 1,
     'email_on_retry': False,
     'retries': 0,
-    'retry_delay': timedelta(minutes=5),
+    'retry_delay': timedelta(minutes=5)
 }
 
 @dag(
