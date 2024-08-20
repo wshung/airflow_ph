@@ -9,7 +9,7 @@ from datetime import date
 from datetime import datetime
 today = date.today()
 from .utils.db_conn_info import host_name, database_name, port, user_name, user_pwd
-from .utils.encryption import TagProjectEncryption
+# from .utils.encryption import TagProjectEncryption
 
 def doing_query(query_string: str)-> pd.DataFrame:
     encry_mgr = TagProjectEncryption(b'ProjectInfo')
@@ -445,7 +445,7 @@ len(tag_table)
 
 
 
-for i in range(0,len(tag_table),10000):
-     write_into_tag_table(df = tag_table.iloc[i:i+10000], table_name = 'lxg_tag', schema_name = 'dt_tag', method = 'keep')
-     print('The batches are:', '[',  i,  + i+10000, ']', '\n')
+# for i in range(0,len(tag_table),10000):
+#      write_into_tag_table(df = tag_table.iloc[i:i+10000], table_name = 'lxg_tag', schema_name = 'dt_tag', method = 'keep')
+#      print('The batches are:', '[',  i,  + i+10000, ']', '\n')
 
