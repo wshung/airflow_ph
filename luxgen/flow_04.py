@@ -10,8 +10,8 @@ from datetime import datetime
 today = date.today()
 
 def doing_query(query_string: str)-> pd.DataFrame:
-    from utils.db_conn_info import host_name, database_name, port, user_name, user_pwd
-    from utils.encryption import TagProjectEncryption
+    from luxgen.utils.utils.db_conn_info import host_name, database_name, port, user_name, user_pwd
+    from luxgen.utils.utils.encryption import TagProjectEncryption
 
     encry_mgr = TagProjectEncryption(b'ProjectInfo')
 
