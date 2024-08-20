@@ -26,7 +26,7 @@ def bash_dag():
     
     task_1=PythonOperator(
         task_id='lxg_flow_04', 
-        python_callable=flow_04,
+        python_callable=flow_04
          )
     
     task_1
