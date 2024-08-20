@@ -9,7 +9,7 @@ from datetime import date
 from datetime import datetime
 today = date.today()
 from .utils.db_conn_info import host_name, database_name, port, user_name, user_pwd
-# from .utils.encryption import TagProjectEncryption
+from .utils.encryption import TagProjectEncryption
 
 def doing_query(query_string: str)-> pd.DataFrame:
     encry_mgr = TagProjectEncryption(b'ProjectInfo')
