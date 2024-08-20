@@ -445,7 +445,7 @@ len(tag_table)
 
 
 
-# for i in range(0,len(tag_table),10000):
-#      write_into_tag_table(df = tag_table.iloc[i:i+10000], table_name = 'lxg_tag', schema_name = 'dt_tag', method = 'keep')
-#      print('The batches are:', '[',  i,  + i+10000, ']', '\n')
+for i in range(0,len(tag_table),10000):
+     write_into_tag_table(df = tag_table.iloc[i:i+10000], table_name = 'lxg_tag', schema_name = 'dt_tag', method = 'keep')
+     print('The batches are:', '[',  i,  + i+10000, ']', '\n')
 
