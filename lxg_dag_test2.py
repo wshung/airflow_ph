@@ -1,8 +1,9 @@
 from datetime import datetime, timedelta
 # from airflow import DAG
 from airflow.decorators import dag
-from airflow.operators.bash import BashOperator
+from airflow.operators.python import PythonOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
+import test.airflow_ph.luxgen.flow_04 as flow_04
 from airflow.models import Variable, XCom
 
 default_args = {
@@ -23,9 +24,9 @@ default_args = {
     )
 def bash_dag():
     
-    task_1=BashOperator(
+    task_1=PythonOperator(
         task_id='lxg_flow_04', 
-        bash_command='python3 /opt/airflow/dags/test/airflow_ph/luxgen/flow_04.py',
+        python_callable=flow_04,
          )
     
     task_1
