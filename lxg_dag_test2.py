@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 # from airflow import DAG
 from airflow.decorators import dag
 from airflow.operators.python import PythonOperator
-from airflow.operators.bash import BashOperato
+from airflow.operators.bash import BashOperator
 from airflow.providers.postgres.operators.postgres import PostgresOperator
 from test.airflow_ph.luxgen.flow_04 import flow_04
 from airflow.models import Variable, XCom
@@ -25,9 +25,9 @@ default_args = {
     )
 def bash_dag():
     
-    task_1=BashOperator(
+    task_1=PythonOperator(
         task_id='lxg_flow_04', 
-        bash_command='python3 /home/eileen_liao_yulon_group_com/airflow/dags/test/airflow_ph/luxgen/flow_04.py'
+        python_callable=flow_04
          )
     
     task_1
