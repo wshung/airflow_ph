@@ -8,9 +8,9 @@ warnings.filterwarnings('ignore')
 from datetime import date
 from datetime import datetime
 today = date.today()
-from utils.db_conn_info import host_name, database_name, port, user_name, user_pwd
-from utils.encryption import TagProjectEncryption
-
+from luxgen.utils.db_conn_info import host_name, database_name, port, user_name, user_pwd
+from luxgen.utils.encryption import TagProjectEncryption
+from luxgen.utils.helpers import get_YN, get_YNO, delete_old_tag, write_into_tag_table
 def doing_query(query_string: str)-> pd.DataFrame:
     encry_mgr = TagProjectEncryption(b'ProjectInfo')
 
@@ -118,12 +118,6 @@ FROM dt_tag.brand_tag_define
 ;
 """
 brand_tag_define = doing_query(query_string)
-
-
-
-
-from utils.helpers import get_YN, get_YNO, delete_old_tag, write_into_tag_table
-
 
 
 
