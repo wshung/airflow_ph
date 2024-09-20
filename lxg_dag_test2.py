@@ -1,10 +1,7 @@
 
 from datetime import datetime, timedelta
-# from airflow import DAG
-from airflow.decorators import dag
+from airflow import DAG
 from airflow.operators.bash import BashOperator
-from airflow.providers.postgres.operators.postgres import PostgresOperator
-from airflow.models import Variable, XCom
 
 default_args = {
     'owner': 'airflow',
