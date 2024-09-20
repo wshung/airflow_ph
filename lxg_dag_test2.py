@@ -12,7 +12,7 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 }
 
-dag = dag(
+dag = DAG(
     dag_id="lxg_dag_test",
     default_args=default_args,
     schedule_interval='@once',
