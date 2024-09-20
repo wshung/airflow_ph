@@ -20,7 +20,7 @@ dag = DAG(
 
 lxg_flow_04=BashOperator(
     task_id='lxg_flow_04', 
-    bash_command='python /home/eileen_liao_yulon_group_com/airflow/dags/test/airflow_ph/luxgen/flow_04.py',
+    bash_command='python /home/eileen_liao_yulon_group_com/airflow/dags/test/airflow_ph/flow_04.py',
     dag=dag,
 )
 
